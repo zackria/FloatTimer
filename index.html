@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zack's Float Timer</title>
+    <link href="./shadow.css" rel="stylesheet">
+    <link href="./material.css" rel="stylesheet">
+    <style>
+      #assessment {
+        font-family: 'Shadows Into Light', cursive;
+        width: 450px;
+        border: 1px solid #ccc;
+        background-color: #fbfbfb;
+        padding: 10px;
+        box-shadow: 2px 2px #ccc;
+      }
+
+      #assessment h1 {
+        margin-top: 0px;
+      }
+
+      #assessment button {
+        width: 100%;
+        height: 30px;
+        margin-top: 8px;
+        border-radius: 5px;
+        background-color: #999;
+        color: #333;
+        font-size: 1.15em;
+
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+      
+
+      <div id="assessment">
+        <h1 style="text-align='center'">Zack's Float Timer</h1>
+    
+
+      
+      60 Second Timer 
+      (<b><span id="time2">0</span> seconds remaining</b>)
+
+      <button id="playButton60"> <i class="material-icons">play_arrow</i></button>
+
+      <button id="stopButton60"> <i class="material-icons">stop</i></button>
+
+      </div>
+
+     
+
+
+  </body>
+  <script>
+
+      const sixtySeconds = document.getElementById("60Seconds");
+      const playButton60 = document.getElementById("playButton60");
+      const stopButton60 = document.getElementById("stopButton60");
+
+
+      var timeLeft60 = 60;
+
+      var timerId60 = null;
+
+      playButton60.addEventListener("click", function(){
+        timeLeft60 = 60;
+        timerId60 = setInterval(countdown60, 1000);
+      })
+
+      stopButton60.addEventListener("click", function(){
+         clearTimeout(timerId60);
+         timeLeft60 = 0;
+        document.getElementById("time2").innerHTML = 0 + ' seconds remaining';
+      })
+
+      function countdown60() {
+        if (timeLeft60 == -1) {
+            clearTimeout(timerId60);
+        } else {
+            document.getElementById("time2").innerHTML = timeLeft60 + ' seconds remaining';
+            timeLeft60--;
+        }
+      }
+
+  </script>
+</html>
