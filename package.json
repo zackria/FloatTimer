@@ -1,7 +1,7 @@
 {
-  "name": "zackfloattimer",
+  "name": "Zfloattimer",
   "version": "1.0.0",
-  "description": "Zack's Float Timer",
+  "description": "ZFloat Timer",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,40 +12,68 @@
   "author": "Zack Dawood",
   "license": "ISC",
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "electron": "^18.2.0"
+    "@electron-forge/cli": "7.4.0",
+    "@electron-forge/maker-deb": "7.4.0",
+    "@electron-forge/maker-rpm": "7.4.0",
+    "@electron-forge/maker-squirrel": "7.4.0",
+    "@electron-forge/maker-zip": "7.4.0",
+    "@electron-forge/maker-dmg": "7.4.0",
+    "@electron-forge/maker-wix": "7.4.0",
+    "electron": "31.1.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
-    "trim-newlines": "^4.0.2"
+    "electron-squirrel-startup": "1.0.1"
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {"icon": "/assets/ZFloatTimer.png"},
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "ZackJeopardyJukeBox"
+            "name": "ZFloatTimer",
+            "authors": "Zack Dawood",
+            "description": "Float Timer Always on Top",
+            "setupIcon": "/assets/ZFloatTimer.ico"
+
+
           }
         },
         {
           "name": "@electron-forge/maker-zip",
+          "config": {
+            "name": "ZFloatTimer",
+            "authors": "Zack Dawood",
+            "description": "Float Timer Always on Top",
+            "setupIcon": "/assets/ZFloatTimer.ico"
+
+
+          },
           "platforms": [
             "darwin"
           ]
+          
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+             "options": {
+            "icon": "/assets/ZFloatTimer.png"
+          }}
         },
         {
           "name": "@electron-forge/maker-rpm",
           "config": {}
+        },{
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "icon": "/assets/ZFloatTimer.icns"
+          }
+        },{
+          "name": "@electron-forge/maker-wix",
+          "config": {
+            "icon": "/assets/ZFloatTimer.ico"
+          }
         }
       ]
     }
