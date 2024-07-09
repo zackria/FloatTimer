@@ -1,15 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Zack's Float Timer</title>
-    <link href="./index.css" rel="stylesheet" />
-    <style></style>
+    <meta charset="UTF-8" />
+    <title>Desktop Float Timer</title>
+    <script src="./scripts/jquery-3.7.1.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-app-region: drag;
+        cursor: move;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .container {
+      }
+
+      .moveHandler {
+        width: 100px;
+        height: 30px;
+        -webkit-app-region: drag;
+        cursor: move;
+        font-size: 50px;
+        border: 0px;
+      }
+
+      .innerDiv {
+        justify-content: right;
+        align-items: right;
+        text-align: right;
+      }
+
+      .textStyle {
+        cursor: pointer;
+        -webkit-app-region: no-drag;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .closeBtn {
+        cursor: pointer;
+        -webkit-user-select: auto;
+        -webkit-app-region: no-drag;
+      }
+
+      .headerHandle {
+        color: black;
+        text-align: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <div id="assessment">
-      <h1 style="text-align='center'">Zack's Float Timer</h1>
+    <img
+    src="./assets/ZFloatTimer.png"
+    alt="logo"
+    width="32"
+    height="32"/>
+    <div id="container">
+      <span class="headerHandle">
+
+      </span>
+      <div class="innerDiv">
+        <br />
+        <button id="closeBtn" class="closeBtn">Close</button> &nbsp;&nbsp;
+      </div>
+      <br />
+      <div class="textStyle">Float Timer</div>
     </div>
+    <script src="./scripts/index.js"></script>
+
   </body>
-  <script></script>
 </html>

@@ -2,7 +2,7 @@
   "name": "Zfloattimer",
   "version": "1.0.0",
   "description": "ZFloat Timer",
-  "main": "main.js",
+  "main": "scripts/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -22,7 +22,8 @@
     "electron": "31.1.0",
     "electron-squirrel-startup": "1.0.1",
     "electron-builder": "24.13.3",
-    "electron-updater": ">=6.3.0-alpha.6"
+    "electron-updater": ">=6.3.0-alpha.6",
+    "electron-reload": "2.0.0-alpha.1"
   },
   "dependencies": {
 
