@@ -20,4 +20,4 @@ If you want an app for Intel
 Once executed it will create a folder with binary inside Project folder.
 Now the app can be moved and used on other computers as binary.
 
-`electron-packager . ZFloatTimer --platform=win32 --arch=x64 --electron-version=1.4.31`
+`electron-packager . ZFloatTimer --platform=win32 --arch=x64 --electron-version=31.1.0`
