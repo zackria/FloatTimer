@@ -19,16 +19,17 @@
     "@electron-forge/maker-zip": "7.4.0",
     "@electron-forge/maker-dmg": "7.4.0",
     "@electron-forge/maker-wix": "7.4.0",
-    "electron": "31.1.0"
-  },
-  "dependencies": {
+    "electron": "31.1.0",
     "electron-squirrel-startup": "1.0.1",
     "electron-builder": "24.13.3",
     "electron-updater": "6.2.1"
   },
+  "dependencies": {
+
+  },
   "config": {
     "forge": {
-      "packagerConfig": {"icon": "/assets/ZFloatTimer.png"},
+      "packagerConfig": {"icon": "assets/ZFloatTimer.png"},
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
@@ -36,7 +37,7 @@
             "name": "ZFloatTimer",
             "authors": "Zack Dawood",
             "description": "Float Timer Always on Top",
-            "setupIcon": "/assets/ZFloatTimer.ico"
+            "setupIcon": "assets/ZFloatTimer.ico"
 
 
           }
@@ -47,7 +48,7 @@
             "name": "ZFloatTimer",
             "authors": "Zack Dawood",
             "description": "Float Timer Always on Top",
-            "setupIcon": "/assets/ZFloatTimer.ico"
+            "setupIcon": "assets/ZFloatTimer.ico"
 
 
           },
@@ -60,7 +61,7 @@
           "name": "@electron-forge/maker-deb",
           "config": {
              "options": {
-            "icon": "/assets/ZFloatTimer.png"
+            "icon": "assets/ZFloatTimer.png"
           }}
         },
         {
@@ -69,12 +70,12 @@
         },{
           "name": "@electron-forge/maker-dmg",
           "config": {
-            "icon": "/assets/ZFloatTimer.icns"
+            "icon": "assets/ZFloatTimer.icns"
           }
         },{
           "name": "@electron-forge/maker-wix",
           "config": {
-            "icon": "/assets/ZFloatTimer.ico"
+            "icon": "assets/ZFloatTimer.ico"
           }
         }
       ]
