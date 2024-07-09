@@ -22,7 +22,9 @@
     "electron": "31.1.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "1.0.1"
+    "electron-squirrel-startup": "1.0.1",
+    "electron-builder": "24.13.3",
+    "electron-updater": "6.2.1"
   },
   "config": {
     "forge": {
