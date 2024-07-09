@@ -37,15 +37,11 @@
       }
 
       .textStyle {
+        text-align: center;
+        align-items: center;
         cursor: pointer;
         -webkit-app-region: no-drag;
         background-color: rgba(0, 0, 0, 0.5);
-      }
-
-      .closeBtn {
-        cursor: pointer;
-        -webkit-user-select: auto;
-        -webkit-app-region: no-drag;
       }
 
       .headerHandle {
@@ -53,26 +49,42 @@
         text-align: center;
         align-items: center;
       }
+
+      .center-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+     }
+
+     .float-right{
+        float:right;
+        cursor: pointer;
+        -webkit-user-select: auto;
+        -webkit-app-region: no-drag;
+     }
+
+     .closeBtn {
+      cursor: pointer;
+      -webkit-user-select: auto;
+      -webkit-app-region: no-drag;
+    }
+     
     </style>
   </head>
   <body>
-    <img
-    src="./assets/ZFloatTimer.png"
-    alt="logo"
-    width="32"
-    height="32"/>
-    <div id="container">
-      <span class="headerHandle">
+    <div class="row">
+      <div class="col-12"> <img src="./assets/ZFloatTimer.png" alt="logo" width="32" height="32" class="center-block" /></div>
 
-      </span>
-      <div class="innerDiv">
-        <br />
-        <button id="closeBtn" class="closeBtn">Close</button> &nbsp;&nbsp;
-      </div>
-      <br />
+  </div>
+   
+    <div class="float-right"> <button id="closeBtn" class="closeBtn">Close</button> &nbsp;&nbsp;</div>
+
+
+
+    <div id="container">
+      <span class="headerHandle"> </span>
       <div class="textStyle">Float Timer</div>
     </div>
     <script src="./scripts/index.js"></script>
-
   </body>
 </html>

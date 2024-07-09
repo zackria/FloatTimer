@@ -6,8 +6,8 @@ require("electron-reload")(__dirname);
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 400,
-    height: 400,
+    width: 300,
+    height: 300,
     frame: false,
     autoHideMenuBar: true,
     transparent: true,
