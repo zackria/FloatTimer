@@ -28,7 +28,7 @@ function createWindow () {
 
   win.setAlwaysOnTop(true, "floating", 1);
   //win.setVisibleOnAllWorkspaces(true);
-  win.loadFile('index.html');
+  win.loadFile('html/index.html');
 
   //win.webContents.openDevTools();
 }

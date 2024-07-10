@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desktop Float Timer</title>
+    <script src="../scripts/jquery-3.7.1.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <link rel="stylesheet" href="../styles/index.css" />
+
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-12"> <img src="../assets/ZFloatTimer.png" alt="logo" width="32" height="32" class="center-block" /></div>
+    </div>
+   
+    <div class="float-right"> <button id="closeBtn" class="closeBtn">Close</button> &nbsp;&nbsp;</div>
+
+
+      <span class="headerHandle"> </span>
+      <!-- <div class="textStyle">Float Timer</div> -->
+      <div class="center-block"></div>
+        <input type="number" id="minutes" placeholder="Minutes" min="0" maxlength="4" size="4"  class="input-group">
+        <input type="number" id="seconds" placeholder="Seconds" min="0" max="59"  maxlength="2" size="2" class="input-group">
+        <button
+          class="input-group"
+          type="button"
+          id="set"
+        >
+          Set
+        </button>
+      </div>
+
+      <div id="timer-display">00:00</div>
+      <div class="center-block-buttons">
+        <button id="start" class="input-group">Start</button>
+        <button id="stop" class="input-group">Stop</button>
+        <button id="pause" class="input-group">Pause</button>
+        <button id="reset" class="input-group">Reset</button>
+      </div>
+
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
