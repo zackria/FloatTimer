@@ -42,12 +42,11 @@ $(function () {
     }, 1000);
   }
 
-  $("#start").click(function () {
-    console.log("#start Function Clicked");
+  function setTime(){
+    console.log("#set Function Clicked");
     const minutes = parseInt($("#minutes").val());
     const seconds = parseInt($("#seconds").val());
     remainingTime = minutes * 60 + seconds;
-
     if (
       isNaN(minutes) ||
       isNaN(seconds) ||
@@ -58,7 +57,15 @@ $(function () {
       alert("Please enter valid minutes and seconds.");
       return;
     }
+    updateTimerDisplay(minutes, seconds);
+  }
 
+  $("#set").click(function () {
+    setTime();
+  });
+
+  $("#start").click(function () {
+    setTime();
     clearInterval(timer);
     isPaused = false;
     startTimer(remainingTime);
