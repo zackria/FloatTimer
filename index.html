@@ -19,22 +19,14 @@
       }
 
       .container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
       }
 
-      .moveHandler {
-        width: 100px;
-        height: 30px;
-        -webkit-app-region: drag;
-        cursor: move;
-        font-size: 50px;
-        border: 0px;
-      }
-
-      .innerDiv {
-        justify-content: right;
-        align-items: right;
-        text-align: right;
-      }
 
       .textStyle {
         text-align: center;
@@ -54,6 +46,9 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
      }
 
      .float-right{
@@ -68,22 +63,38 @@
       -webkit-user-select: auto;
       -webkit-app-region: no-drag;
     }
+
+    .input-group {
+      cursor: pointer;
+      -webkit-user-select: auto;
+      -webkit-app-region: no-drag;
+      width: 70px;
+    }
+    
      
     </style>
   </head>
   <body>
     <div class="row">
       <div class="col-12"> <img src="./assets/ZFloatTimer.png" alt="logo" width="32" height="32" class="center-block" /></div>
-
-  </div>
+    </div>
    
     <div class="float-right"> <button id="closeBtn" class="closeBtn">Close</button> &nbsp;&nbsp;</div>
 
-
-
-    <div id="container">
+    <div id="container"></div>
       <span class="headerHandle"> </span>
-      <div class="textStyle">Float Timer</div>
+      <!-- <div class="textStyle">Float Timer</div> -->
+      <div class="center-block"></div>
+        <input type="number" id="minutes" placeholder="Minutes" min="0" maxlength="4" size="4"  class="input-group">
+        <input type="number" id="seconds" placeholder="Seconds" min="0" max="59"  maxlength="2" size="2" class="input-group">
+        <button
+          class="input-group"
+          type="button"
+          id="button-addon2"
+        >
+          Set
+        </button>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
