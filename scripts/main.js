@@ -7,7 +7,7 @@ require("electron-reload")(__dirname);
 function createWindow () {
   const win = new BrowserWindow({
     width: 300,
-    height: 300,
+    height: 200,
     frame: false,
     autoHideMenuBar: true,
     transparent: true,
@@ -22,7 +22,7 @@ function createWindow () {
 
 
   ipcMain.on("close-app", () => {
-    console.log("close-app is called");
+    //console.log("close-app is called");
     app.quit();
   });
 
